@@ -31,6 +31,7 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.text.method.ScrollingMovementMethod;
+import android.util.Log;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -297,6 +298,7 @@ public class CalendarActivity extends Activity {
         protected void onPostExecute(List<String> output) {
             mProgress.hide();
             if (output == null || output.size() == 0) {
+                Log.d("bob","size: " + output.size());
                 mOutputText.setText("No results returned.");
             } else {
                 output.add(0, "Data retrieved using the Google Calendar API:");

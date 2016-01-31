@@ -43,7 +43,7 @@
         -->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="@string/google_maps_key" />
+            android:value="AIzaSyDDWsvJBabD211akqgCQXJGf2ZoA_k4398" />
 
         <activity
             android:name=".MapsActivity"
@@ -58,6 +58,7 @@
 
 
         </activity>
+
 
         <activity
             android:name=".CalendarActivity"
