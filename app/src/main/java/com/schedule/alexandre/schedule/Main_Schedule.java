@@ -28,9 +28,14 @@ public class Main_Schedule extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         parentHeaderInformation = new ArrayList<String>();
-        parentHeaderInformation.add("Cars");
-        parentHeaderInformation.add("Houses");
-        parentHeaderInformation.add("Football Clubs");
+        parentHeaderInformation.add("Lundi");
+        parentHeaderInformation.add("Mardi");
+        parentHeaderInformation.add("Mercredi");
+        parentHeaderInformation.add("Jeudi");
+        parentHeaderInformation.add("Vendredi");
+        parentHeaderInformation.add("Samedi");
+        parentHeaderInformation.add("Dimanche");
+
 
         HashMap<String, List<String>> allChildItems = returnGroupedChildItems();
         expandableListView = (ExpandableListView)findViewById(R.id.expandableListView);
@@ -42,27 +47,41 @@ public class Main_Schedule extends AppCompatActivity {
 
         HashMap<String, List<String>> childContent = new HashMap<String, List<String>>();
 
-        List<String> cars = new ArrayList<String>();
-        cars.add("Volvo");
-        cars.add("BMW");
-        cars.add("Toyota");
-        cars.add("Nissan");
+        List<String> lundi = new ArrayList<String>();
+        lundi.add("lundi");
 
-        List<String> houses = new ArrayList<String>();
-        houses.add("Duplex");
-        houses.add("Twin Duplex");
-        houses.add("Bungalow");
-        houses.add("Two Storey");
 
-        List<String> footballClubs = new ArrayList<String>();
-        footballClubs.add("Liverpool");
-        footballClubs.add("Arsenal");
-        footballClubs.add("Stoke City");
-        footballClubs.add("West Ham");
+        List<String> mardi = new ArrayList<String>();
+        mardi.add("mardi");
 
-        childContent.put(parentHeaderInformation.get(0), cars);
-        childContent.put(parentHeaderInformation.get(1), cars);
-        childContent.put(parentHeaderInformation.get(2), cars);
+
+        List<String> mercredi = new ArrayList<String>();
+        mercredi.add("mercredi");
+
+
+        List<String> jeudi = new ArrayList<String>();
+        jeudi.add("jeudi");
+
+
+        List<String> vendredi = new ArrayList<String>();
+        vendredi.add("vendredi");
+
+
+        List<String> samedi = new ArrayList<String>();
+        samedi.add("samedi");
+
+
+        List<String> dimanche = new ArrayList<String>();
+        dimanche.add("dimanche");
+
+
+        childContent.put(parentHeaderInformation.get(0), lundi);
+        childContent.put(parentHeaderInformation.get(1), mardi);
+        childContent.put(parentHeaderInformation.get(2), mercredi);
+        childContent.put(parentHeaderInformation.get(3), jeudi);
+        childContent.put(parentHeaderInformation.get(4), vendredi);
+        childContent.put(parentHeaderInformation.get(5), samedi);
+        childContent.put(parentHeaderInformation.get(6), dimanche);
 
         return childContent;
     }
