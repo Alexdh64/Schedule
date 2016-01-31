@@ -8,12 +8,17 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.app.Activity;
+import android.os.Bundle;
+import android.widget.TextView;
 
 public class Main_Schedule extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        TextView text = new TextView(this);
+        text.setText("Bonjour, vous me devez 1 000 000€.");
         setContentView(R.layout.activity_main__schedule);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -26,6 +31,8 @@ public class Main_Schedule extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+        setContentView(text);
+
     }
 
     @Override
